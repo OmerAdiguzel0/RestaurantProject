@@ -1,0 +1,8 @@
+# Build klasörleri
+bin/
+obj/
+.vs/
+
+# Kullanıcı ayar dosyaları
+*.user
+*.suo
