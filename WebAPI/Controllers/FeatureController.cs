@@ -43,7 +43,7 @@ namespace WebAPI.Controllers
             return Ok("Öne Çıkan Bilgisi Eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteFeature(int id)
         {
             var value = _featureService.TGetById(id);
@@ -51,7 +51,7 @@ namespace WebAPI.Controllers
             return Ok("Öne Çıkan Bilgisi Silindi");
         }
 
-        [HttpGet("GetFeature")]
+        [HttpGet("{id}")]
         public IActionResult GeFeature(int id)
         {
             var value = _featureService.TGetById(id);

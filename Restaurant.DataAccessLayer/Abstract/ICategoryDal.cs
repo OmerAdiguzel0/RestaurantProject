@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace Restaurant.DataAccessLayer.Abstract
 {
-    public interface ICategoryDal:IGenericDal<Category>
+    public interface ICategoryDal : IGenericDal<Category>
     {
+        int CategoryCount();
+        int ActiveCategoryCount();
+        int PassiveCategoryCount();
     }
 }

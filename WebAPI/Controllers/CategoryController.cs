@@ -41,7 +41,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteCategory(int id) 
+        public IActionResult DeleteCategory(int id)
         {
             var value = _categoryService.TGetById(id);
             _categoryService.TDelete(value);
@@ -49,10 +49,26 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetCategory(int id) 
+        public IActionResult GetCategory(int id)
         {
             var value = _categoryService.TGetById(id);
             return Ok(value);
+        }
+
+        [HttpGet("CategoryCount")]
+        public IActionResult CategoryCount()
+        {
+            return Ok(_categoryService.TCategoryCount());
+        }
+        [HttpGet("ActiveCategoryCount")]
+        public IActionResult ActiveCategoryCount()
+        {
+            return Ok(_categoryService.TActiveCategoryCount());
+        }
+        [HttpGet("PassiveCategoryCount")]
+        public IActionResult PassiveCategoryCount()
+        {
+            return Ok(_categoryService.TPassiveCategoryCount());
         }
 
         [HttpPut]

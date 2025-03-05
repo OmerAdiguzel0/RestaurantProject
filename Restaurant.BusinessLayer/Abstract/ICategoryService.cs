@@ -8,7 +8,12 @@ using System.Threading.Tasks;
 
 namespace Restaurant.BusinessLayer.Abstract
 {
-    public interface ICategoryService:IGenericService<Category>
+    public interface ICategoryService : IGenericService<Category>
     {
+        int TCategoryCount();
+        int TActiveCategoryCount();
+        int TPassiveCategoryCount();
+
+
     }
 }

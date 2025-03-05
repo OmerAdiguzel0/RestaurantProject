@@ -40,7 +40,7 @@ namespace WebAPI.Controllers
             return Ok("Sosyal Medya Bilgisi Eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteSocialMedia(int id)
         {
             var value = _socialMediaService.TGetById(id);
@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
             return Ok("Sosyal Medya Bilgisi Silindi.");
         }
 
-        [HttpGet("GetSocialMedia")]
+        [HttpGet("{id}")]
         public IActionResult GeSocialMedia(int id)
         {
             var value = _socialMediaService.TGetById(id);

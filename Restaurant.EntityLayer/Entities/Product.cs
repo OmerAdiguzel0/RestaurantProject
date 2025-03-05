@@ -10,6 +10,6 @@
         public string ImageURL { get; set; }
         public bool ProductStatus { get; set; }
         public Category Category { get; set; }
-
+        public List<OrderDetail> OrderDetails { get; set; }
     }
 }

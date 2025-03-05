@@ -42,7 +42,7 @@ namespace WebAPI.Controllers
             return Ok("Müşteri Yorum Bilgisi Eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteTestimonial(int id)
         {
             var value = _testimonialService.TGetById(id);
@@ -50,7 +50,7 @@ namespace WebAPI.Controllers
             return Ok("Müşteri Yorum Bilgisi Silindi.");
         }
 
-        [HttpGet("GetTestimonial")]
+        [HttpGet("{id}")]
         public IActionResult GeTestimonial(int id)
         {
             var value = _testimonialService.TGetById(id);
